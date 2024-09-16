@@ -19,11 +19,10 @@ public class ApplicationQuitHandler : MonoBehaviour
     {
         if (!coroutineCompleted)
         {
-            // Start the coroutine and indicate that we want to wait for it to complete
             StartCoroutine(NetworkManager.Instance.QuitCoroutine());
-            return false; // Cancel the quit request for now
+            return false;
         }
-        return true; // Allow the quit request
+        return true; 
     }
 
 
